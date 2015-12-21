@@ -7,8 +7,14 @@ public class CommandLineCalculator2 {
 
         String inputNumbers;
 
-        System.out.println("Enter the task");
 
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the number");
+
+
+        
 
 
     }
