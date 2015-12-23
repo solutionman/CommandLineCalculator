@@ -34,16 +34,23 @@ public class CommandLineCalculator2 {
 
         if (sign.equals(plus)) {
             double z = x + y;
-            System.out.println("The sum of your numbers is " + z );
+            System.out.println(x + " + " + y + " = " + z );
         }
         else if (sign.equals(minus)) {
             double z = x - y;
-            System.out.println("The sum of your numbers is " + z );
+            System.out.println(x + " - " + y + " = " + z );
+        }
+        else if (sign.equals(divide)) {
+            double z = x / y;
+            System.out.println(x + " / " + y + " = " + z );
+        }
+        else if (sign.equals(multiply)) {
+            double z = x * y;
+            System.out.println(x + " * " + y + " = " + z );
         }
         else {
-            System.out.println("Something goes wrong...");
+            System.out.println("It looks, like you choose wrong sign...");
         }
-
 
     }
 }
