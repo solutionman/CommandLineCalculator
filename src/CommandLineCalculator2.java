@@ -9,6 +9,8 @@ public class CommandLineCalculator2 {
 
         String plus = "+";
         String minus = "-";
+        String divide = "/";
+        String multiply = "*";
 
         Scanner scan = new Scanner(System.in);
 
@@ -17,7 +19,7 @@ public class CommandLineCalculator2 {
         double x = scan.nextDouble();
 
         System.out.println("You entered " + x);
-        System.out.println("Now enter the operation you need to perform");
+        System.out.println("Now enter the operation you need to perform ( + - / * ) and press \"Enter\"");
 
 
         String sign = scan.next();
