@@ -36,6 +36,10 @@ public class CommandLineCalculator2 {
             double z = x + y;
             System.out.println("The sum of your numbers is " + z );
         }
+        else if (sign.equals(minus)) {
+            double z = x - y;
+            System.out.println("The sum of your numbers is " + z );
+        }
         else {
             System.out.println("Something goes wrong...");
         }
