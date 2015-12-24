@@ -66,6 +66,7 @@ public class CommandLineCalculator3 {
                 System.out.println("Good bye :)");
             }
         }
+
         while (calculate);
 
     }
