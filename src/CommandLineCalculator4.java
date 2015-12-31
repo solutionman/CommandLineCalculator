@@ -14,7 +14,7 @@ public class CommandLineCalculator4 {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Enter your task for computing and press \"Enter\"");
+        System.out.println("Enter first number, then + then second number and press \"Enter\"");
 
         String task = scan.next();
 
@@ -22,78 +22,19 @@ public class CommandLineCalculator4 {
 
         String[] splitted = task.split(delims);
 
-        System.out.println(Arrays.toString(splitted));
+        //System.out.println(Arrays.toString(splitted));
 
-        //System.out.println(task);
-
-        for(int i = 0; i < task.length(); i++){
-
-            String check = task.substring(i, i+1);
-            String tempnum = "";
-
-
-            //System.out.println(check);
-
-            if(check.equals(one) || check.equals(two) || check.equals(three) || check.equals(four) || check.equals(five) || check.equals(six) || check.equals(seven) || check.equals(eight) || check.equals(nine) || check.equals(zero)) {
-                tempnum = check;
-                num1 += tempnum;
-                // System.out.println(firstnum);
-            }
-
-
-
-            else if(check.equals(plus)) {
-                sign = plus;
-            }
-
-
-            else if(check.equals(one) || check.equals(two) || check.equals(three) || check.equals(four) || check.equals(five) || check.equals(six) || check.equals(seven) || check.equals(eight) || check.equals(nine) || check.equals(zero)) {
-                tempnum = check;
-                num2 += tempnum;
-                // System.out.println(firstnum);
-            }
-
-            /*else if(check.equals(two)) {
-                int x = Integer.parseInt(check);
-                System.out.println(x);
-            }
-            else if(check.equals(three)) {
-                int x = Integer.parseInt(check);
-                System.out.println(x);
-            }
-            else if(check.equals(four)) {
-                int x = Integer.parseInt(check);
-                System.out.println(x);
-            }
-            else if(check.equals(five)) {
-                int x = Integer.parseInt(check);
-                System.out.println(x);
-            }
-            else if(check.equals(six)) {
-                int x = Integer.parseInt(check);
-                System.out.println(x);
-            }
-            else if(check.equals(seven)) {
-                int x = Integer.parseInt(check);
-                System.out.println(x);
-            }
-            else if(check.equals(eight)) {
-                int x = Integer.parseInt(check);
-                System.out.println(x);
-            }
-            else if(check.equals(nine)) {
-                int x = Integer.parseInt(check);
-                System.out.println(x);
-            }
-            else if(check.equals(zero)) {
-                int x = Integer.parseInt(check);
-                System.out.println(x);
-            }*/
-
+        int size = splitted.length;
+        for (int i = 0; i < size; i++) {
+            num1 = splitted[0];
+            num2 = splitted[1];
         }
-        System.out.println(num1);
-        System.out.println(sign);
-        System.out.println(num2);
+
+        Double doublenum1 = Double.parseDouble(num1);
+        Double doublenum2 = Double.parseDouble(num2);
+
+        Double result = doublenum1 + doublenum2;
+        System.out.println("Result of your expressin is: " + result);
 
     }
 }
