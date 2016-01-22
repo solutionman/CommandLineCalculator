@@ -14,13 +14,14 @@ public class CommandLineCalculator4 {
 
       Scanner scan = new Scanner(System.in);
 
-      System.out.println("Enter first number, then + then second number and press \"Enter\"");
+      System.out.println("Enter first number, then sign ( + - / * ) then second number and press \"Enter\"");
 
       String task = scan.next();
 
         num1 = "" + task.charAt(0);
         sign = "" + task.charAt(1);
         num2 = "" + task.charAt(2);
+
 
         Double doublenum1 = Double.parseDouble(num1);
         Double doublenum2 = Double.parseDouble(num2);
