@@ -14,7 +14,7 @@ public class CommandLineCalculator5 {
 
         Scanner scanline = new Scanner(System.in);
 
-        System.out.println("Enter the number, sign (+ - / * ) and press \"Enter\"");
+        System.out.println("Enter the number, sign (+ - / * ), another number and press \"Enter\"");
 
         String expression = scanline.next();
 
