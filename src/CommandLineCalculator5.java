@@ -29,42 +29,60 @@ public class CommandLineCalculator5 {
             //System.out.println(PointOfSign);
             num1 = expression.substring(0, PointOfSign);
             num2 = expression.substring(PointOfSign+1, expression.length());
-            DoubleNum1 = Double.parseDouble(num1);
-            DoubleNum2 = Double.parseDouble(num2);
-            Result = DoubleNum1 + DoubleNum2;
-            System.out.println(num1 + " + " + num2 + " = " + Result);
+            try {
+                DoubleNum1 = Double.parseDouble(num1);
+                DoubleNum2 = Double.parseDouble(num2);
+                Result = DoubleNum1 + DoubleNum2;
+                System.out.println(num1 + " + " + num2 + " = " + Result);
+            } catch(NumberFormatException e){
+                System.out.println("Enter Numbers only!");
+            }
+
+
 
         }
         else if(searchMinus) {
             PointOfSign = expression.indexOf(minus);
             num1 = expression.substring(0, PointOfSign);
             num2 = expression.substring(PointOfSign + 1, expression.length());
-            DoubleNum1 = Double.parseDouble(num1);
-            DoubleNum2 = Double.parseDouble(num2);
-            Result = DoubleNum1 - DoubleNum2;
-            System.out.println(num1 + " - " + num2 + " = " + Result);
+            try {
+                DoubleNum1 = Double.parseDouble(num1);
+                DoubleNum2 = Double.parseDouble(num2);
+                Result = DoubleNum1 - DoubleNum2;
+                System.out.println(num1 + " - " + num2 + " = " + Result);
+            } catch(NumberFormatException e) {
+                System.out.println("Enter Numbers only!");
+            }
         }
         else if(searchDivide) {
             PointOfSign = expression.indexOf(divide);
             num1 = expression.substring(0, PointOfSign);
             num2 = expression.substring(PointOfSign + 1, expression.length());
-            DoubleNum1 = Double.parseDouble(num1);
-            DoubleNum2 = Double.parseDouble(num2);
-            if(DoubleNum2 == 0.0){
-                System.out.println("You cannot divide on zero");
-            } else {
-                Result = DoubleNum1 / DoubleNum2;
-                System.out.println(num1 + " / " + num2 + " = " + Result);
+            try {
+                DoubleNum1 = Double.parseDouble(num1);
+                DoubleNum2 = Double.parseDouble(num2);
+                if (DoubleNum2 == 0.0) {
+                    System.out.println("You cannot divide on zero");
+                } else {
+                    Result = DoubleNum1 / DoubleNum2;
+                    System.out.println(num1 + " / " + num2 + " = " + Result);
+                }
+            } catch(NumberFormatException e) {
+                System.out.println("Enter Numbers only!");
             }
         }
         else if(searchMultiply) {
             PointOfSign = expression.indexOf(multiply);
             num1 = expression.substring(0, PointOfSign);
             num2 = expression.substring(PointOfSign + 1, expression.length());
-            DoubleNum1 = Double.parseDouble(num1);
-            DoubleNum2 = Double.parseDouble(num2);
-            Result = DoubleNum1 * DoubleNum2;
-            System.out.println(num1 + " * " + num2 + " = " + Result);
+            try {
+                DoubleNum1 = Double.parseDouble(num1);
+                DoubleNum2 = Double.parseDouble(num2);
+                Result = DoubleNum1 * DoubleNum2;
+                System.out.println(num1 + " * " + num2 + " = " + Result);
+            } catch(NumberFormatException e) {
+                System.out.println("Enter Numbers only!");
+            }
         }
         else {
             System.out.println("Choose right sign.");
